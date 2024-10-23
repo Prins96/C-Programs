@@ -1,0 +1,56 @@
+﻿<Window x:Class="MarmotaGame.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MarmotaGame"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="877">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/fondo.jpg"/>
+        </Grid.Background>
+
+        <Grid Margin="20,40,20,280">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <!-- Ajustar VerticalAlignment y HorizontalAlignment para centrar el punto de selección -->
+            <RadioButton x:Name="Rba1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" IsChecked="True">
+                <RadioButton.Content>
+                    <Image Source="a1.png"/>
+                </RadioButton.Content>
+            </RadioButton>
+
+            <RadioButton x:Name="Rba2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <RadioButton.Content>
+                    <Image Source="/a2.png"/>
+                </RadioButton.Content>
+            </RadioButton>
+
+            <RadioButton x:Name="Rba3" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <RadioButton.Content>
+                    <Image Source="a3.png"/>
+                </RadioButton.Content>
+            </RadioButton>
+
+            <RadioButton x:Name="Rba4" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <RadioButton.Content>
+                    <Image Source="/a4.png"/>
+                </RadioButton.Content>
+            </RadioButton>
+        </Grid>
+
+        <Grid Margin="20,300,20,20" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="BtPlay" Content="PLAY" Background="GreenYellow" FontSize="50" Click="BtPlay_Click" HorizontalAlignment="Left" Width="113"/>
+        </Grid>
+
+    </Grid>
+</Window>

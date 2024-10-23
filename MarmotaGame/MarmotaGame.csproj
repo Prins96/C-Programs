@@ -1,0 +1,87 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="a1.png" />
+    <None Remove="a2.png" />
+    <None Remove="a3.png" />
+    <None Remove="a4.png" />
+    <None Remove="fondo.jpg" />
+    <None Remove="marmota_1.png" />
+    <None Remove="Resources\a1.png" />
+    <None Remove="Resources\a2.png" />
+    <None Remove="Resources\a3.png" />
+    <None Remove="Resources\a4.png" />
+    <None Remove="Resources\AgujeroVacio.png" />
+    <None Remove="Resources\bien.wav" />
+    <None Remove="Resources\fondo.jpg" />
+    <None Remove="Resources\marmota_1.png" />
+    <None Remove="Resources\marmota_2.png" />
+    <None Remove="Resources\marmota_3.png" />
+    <None Remove="Resources\marmota_4.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="a1.png" />
+    <Resource Include="a2.png" />
+    <Resource Include="a3.png" />
+    <Resource Include="a4.png" />
+    <Resource Include="fondo.jpg" />
+    <Resource Include="marmota_1.png" />
+    <Resource Include="Resources\a1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\a2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\a3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\a4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\AgujeroVacio.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\bien.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\fondo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\marmota_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\marmota_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\marmota_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\marmota_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\error.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\falla.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\salidaMarmota.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\sonidofondo.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

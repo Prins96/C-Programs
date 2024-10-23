@@ -1,0 +1,16 @@
+﻿<Window x:Class="juegoMemoria.MainWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       xmlns:local="clr-namespace:juegoMemoria"
+       mc:Ignorable="d"
+       Title="MEMORY GAME" Width="670" Height="515">
+    <Grid>
+        <Button x:Name="btnReiniciar" Content="Reincio de juego" HorizontalAlignment="Left" Margin="485,137,0,0" VerticalAlignment="Top" Width="155" Click="btnReiniciar_Click"/>
+        <Label Content="Record: " HorizontalAlignment="Left" Margin="485,32,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft Sans Serif"/>
+        <Label x:Name="lblRecord" Content="0" HorizontalAlignment="Left" Margin="565,32,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft Sans Serif"/>
+        <Label x:Name="lblImagenSelecciona" Content="imagenSelecciona" HorizontalAlignment="Left" Margin="485,70,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Microsoft Sans Serif"/>
+        <Grid x:Name="PanelJuego" Margin="20,20,220,20" Background="GreenYellow"/>
+    </Grid>
+</Window>

@@ -1,0 +1,7 @@
+C:\Users\david\OneDrive - INS Provençana\2DAM\M07DesarrolloDeInterficies\UF1\UF1IntroduccionC#\Programas\practicaVueling\bin\Debug\practicaVueling.exe.config
+C:\Users\david\OneDrive - INS Provençana\2DAM\M07DesarrolloDeInterficies\UF1\UF1IntroduccionC#\Programas\practicaVueling\bin\Debug\practicaVueling.exe
+C:\Users\david\OneDrive - INS Provençana\2DAM\M07DesarrolloDeInterficies\UF1\UF1IntroduccionC#\Programas\practicaVueling\bin\Debug\practicaVueling.pdb
+C:\Users\david\OneDrive - INS Provençana\2DAM\M07DesarrolloDeInterficies\UF1\UF1IntroduccionC#\Programas\practicaVueling\obj\Debug\practicaVueling.csproj.AssemblyReference.cache
+C:\Users\david\OneDrive - INS Provençana\2DAM\M07DesarrolloDeInterficies\UF1\UF1IntroduccionC#\Programas\practicaVueling\obj\Debug\practicaVueling.csproj.CoreCompileInputs.cache
+C:\Users\david\OneDrive - INS Provençana\2DAM\M07DesarrolloDeInterficies\UF1\UF1IntroduccionC#\Programas\practicaVueling\obj\Debug\practicaVueling.exe
+C:\Users\david\OneDrive - INS Provençana\2DAM\M07DesarrolloDeInterficies\UF1\UF1IntroduccionC#\Programas\practicaVueling\obj\Debug\practicaVueling.pdb
