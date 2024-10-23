@@ -1,0 +1,104 @@
+﻿<Window x:Class="LoginWPF.ClientView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoginWPF"
+        mc:Ignorable="d"
+        Title="ClientView" Height="486" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" >
+            <GradientStop Color="DodgerBlue" Offset="0"/>
+            <GradientStop Color="Silver" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Menu Height="30" VerticalAlignment="Top" Background="Black">
+            <MenuItem Header="_Clientes" FontSize="15" Foreground="White">
+                <MenuItem Header="_Listar" Foreground="Black" InputGestureText="Ctrl + L" Click="Listar_button"/>
+            </MenuItem>
+            <MenuItem Header="_Orders" FontSize="15" Foreground="White">
+                <MenuItem Header="L_istado" Foreground="Black" InputGestureText="Ctrl + I" Click="orderClient_button"/>
+            </MenuItem>
+        </Menu>
+        <Label x:Name="lbWhoIs" Content="HOlaaaa" FontFamily="Verdana" Background="#00000000" Foreground="#FFFFFFFF" FontWeight="Bold" Margin="100, 40, 100, 350" />
+
+        <DataGrid x:Name="dataGridClients" d:ItemsSource="{d:SampleData ItemCount=5}" GridLinesVisibility="Vertical" RowBackground="LightYellow" AlternatingRowBackground="LightBlue" BorderBrush="GreenYellow" BorderThickness="2" VerticalScrollBarVisibility="Visible" CanUserResizeRows="False" CanUserResizeColumns="False" HeadersVisibility="All" Margin="98,109,98,46" IsReadOnly="True"/>
+
+        <ListBox x:Name="myListBox"  Margin="120,150,120,80" SelectionChanged="selectArticles_button">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{Binding IdOrder}"/>
+                        <TextBlock Grid.Column="1" Text="{Binding ClientName}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <ListView x:Name="myListView2" Margin="98,109,98,60" HorizontalAlignment="Center">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID Article" Width="150">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding IdArticle}" HorizontalAlignment="Center" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Article Name" Width="150">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding ArticleName}" HorizontalAlignment="Center" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Unit Price" Width="150">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding UnitPrice}" HorizontalAlignment="Center" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Availability" Width="150">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Availability}" HorizontalAlignment="Center" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button x:Name="BtExportar" Content="Exportar a PDF" Click="ExportToPDF_Click" HorizontalAlignment="Center" Margin="0,410,0,0" Height="31" Width="94">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="1" CornerRadius="5">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="LightBlue"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="Padding" Value="10"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="DodgerBlue"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="DeepSkyBlue"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Window>

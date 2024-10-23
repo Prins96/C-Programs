@@ -1,0 +1,107 @@
+﻿<Window x:Class="LoginWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoginWPF"
+        mc:Ignorable="d"
+        Title="Examen" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Foreground="#FFF5EAEA">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="DodgerBlue" Offset="0"/>
+            <GradientStop Color="GreenYellow" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Menu Height="30" VerticalAlignment="Top" Background="Black">
+            <MenuItem Header="_Salir" FontSize="15" Foreground="White" Click="Salir_Click"/>
+            <MenuItem Header="_Reservas" FontSize="15" Foreground="White">
+                <MenuItem Header="Insertar" Foreground="Black" Click="Insertar_Click"/>
+                <MenuItem Header="Listar" Foreground="Black" Click="Listar_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <!-- Contenedor para el formulario de inserción de reservas -->
+        <StackPanel x:Name="FormularioInsercion" Margin="0, 25, 0, 0" Visibility="Collapsed">
+            <Label Content="Nombre de empresa:" />
+            <TextBox x:Name="TbNombreEmpresa" />
+            <Label Content="Cantidad de lugares de trabajo para reservar:" />
+            <ComboBox x:Name="CbCantidadLugares" />
+            <Label Content="Data:" />
+            <StackPanel Orientation="Horizontal">
+                <ComboBox x:Name="CbDay" />
+                <ComboBox x:Name="CbMount" />
+                <ComboBox x:Name="CbYear" />
+            </StackPanel>
+            <Label Content="Prestamo de equipo informatico:" />
+            <RadioButton x:Name="RbPrestemoEquipoSi" Content="Sí" />
+            <RadioButton x:Name="RbPrestemoEquipoNo" Content="No" />
+            <Label Content="Teléfon:" />
+            <TextBox x:Name="TbTelefon" MaxLength="9" />
+            <Label Content="Observaciones:" />
+            <TextBox x:Name="TbObservaciones" MaxLength="120" />
+            <Button Content="Validar" Click="Validar_Click" />
+        </StackPanel>
+
+
+        <StackPanel x:Name="ListadoReservas" Margin="0, 30, 0, 0" Visibility="Collapsed">
+            <Label Content="Filtrar por empresa:" />
+            <ComboBox x:Name="CbFiltrarEmpresa" />
+            <ListView x:Name="LvReservas">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="ID" Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Id}" HorizontalAlignment="Center" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Nombre empresa" Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Nom_empresa}" HorizontalAlignment="Center" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Fecha" Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Data}" HorizontalAlignment="Center" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Lugar de trabajo" Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Llocs_de_treball}" HorizontalAlignment="Center" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Equipo informatico" Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Equip_informatic}" HorizontalAlignment="Center" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Telefono" Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Tel}" HorizontalAlignment="Center" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Observaciones" Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Obs}" HorizontalAlignment="Center" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Window>
